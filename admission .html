@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions - CodeMamo Elite School</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Roboto', sans-serif;
+            color: #2c3e50;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            color: #e74c3c;
+        }
+
+        /* Navigation Bar Styles */
+        nav {
+            background-color: #34495e;
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px 20px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #e74c3c;
+            border-radius: 5px;
+        }
+
+        nav img {
+            height: 40px; /* Adjust size of logo */
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .join-us {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #e74c3c;
+            animation: popIn 1.5s ease-in-out infinite;
+        }
+
+        @keyframes popIn {
+            0% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(1); opacity: 0.5; }
+        }
+
+        /* Application Form Styles */
+        .application-form {
+            background-color: #ffffff;
+            padding: 30px;
+            margin-top: 30px;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+
+        .application-form label {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #34495e;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .application-form input, .application-form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #2c3e50;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .application-form button {
+            background-color: #e74c3c;
+            color: white;
+            font-size: 1.2em;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .application-form button:hover {
+            background-color: #c0392b;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #34495e;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <img src="C:\Users\HP\OneDrive\รูปภาพ\princess\school logo.jpg" alt="School Logo"> <!-- Replace with actual logo path -->
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Admissions</h1>
+        <h2>Join Us at CodeMamo Elite School</h2>
+        
+        <!-- Join Us (Pop-Up Text) -->
+        <div class="join-us">
+            JOIN US
+        </div>
+
+        <!-- Application Form -->
+        <div class="application-form">
+            <h3>Student Application Form</h3>
+            <form id="admissionForm" onsubmit="submitForm(event)">
+                <!-- First Name -->
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+                
+                <!-- Last Name -->
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+
+                <!-- Gender -->
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+
+                <!-- Previous School -->
+                <label for="previousSchool">Previous School (if any):</label>
+                <input type="text" id="previousSchool" name="previousSchool">
+
+                <!-- Parent/Guardian Name -->
+                <label for="guardianName">Parent/Guardian Name:</label>
+                <input type="text" id="guardianName" name="guardianName" required>
+
+                <!-- Parent/Guardian Phone -->
+                <label for="phoneNumber">Parent/Guardian Phone Number:</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" required>
+
+                <!-- Grade Level -->
+                <label for="gradeLevel">Grade Level:</label>
+                <select id="gradeLevel" name="gradeLevel" required>
+                    <option value="">grade level</option>
+                    <option value="Nursery">Nursery</option>
+                    <option value="Class 1">Class 1</option>
+                    <option value="Class 2">Class 2</option>
+                    <option value="Class 3">Class 3</option>
+                    <option value="Class 4">Class 4</option>
+                    <option value="Class 5">Class 5</option>
+                    <option value="Class 6">Class 6</option>
+                    <option value="Class 7">Class 7</option>
+                </select>
+
+                <!-- Email -->
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+                <!-- Submit Button -->
+                <button type="submit">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 CodeMamo Elite School. All rights reserved.</p>
+    </div>
+
+    <!-- JavaScript to handle form submission -->
+    <script>
+        // Form submission handler
+        function submitForm(event) {
+            event.preventDefault(); // Prevents the form from submitting normally
+
+            // Form Data
+            const formData = new FormData(document.getElementById('admissionForm'));
+
+            // Convert FormData to an object
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+
+            // Send data to Gmail via an email service
+            const emailData = {
+                to: 'fabiancollins97@gmail.com',
+                subject: 'New Student Application - CodeMamo Elite School',
+                body: `
+                    New student application received!
+
+                    First Name: ${data.firstName}
+                    Last Name: ${data.lastName}
+                    Gender: ${data.gender}
+                    Previous School: ${data.previousSchool}
+                    Parent/Guardian Name: ${data.guardianName}
+                    Parent/Guardian Phone: ${data.phoneNumber}
+                    Grade Level: ${data.gradeLevel}
+                    Email: ${data.email}
+                `
+            };
+
+            // Example function to simulate email sending (replace with an actual email sending service)
+            sendEmail(emailData);
+
+            // Clear the form after submission
+            document.getElementById('admissionForm').reset();
+            alert('Your application has been submitted successfully!');
+        }
+
+        // Simulate sending email (replace this with an actual email API like Formspree, EmailJS, etc.)
+        function sendEmail(emailData) {
+            console.log('Sending email...', emailData); // Replace this with an actual API call
+        }
+    </script>
+
+</body>
+</html>
